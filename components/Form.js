@@ -1,4 +1,10 @@
-function Form() {
+import { useState } from 'react'
+
+
+function Form(props) {
+  const [formCompleted, setFormCompleted] = useState(false)
+
+
   return (
     <form> 
     <label htmlFor="form-question1">How many promotional emails do you receive on average in a week? (from marketing mailing lists) 
