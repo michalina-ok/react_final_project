@@ -1,6 +1,6 @@
 function AnimationSection() {
   return (
-    <div className="animationSection">AnimationSection</div>
+    <section className="animation">AnimationSection</section>
   )
 }
 
