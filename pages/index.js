@@ -8,7 +8,6 @@ import Footer from "../components/Footer";
 import { useState } from "react";
 
 export default function Home() {
-  //const [result, setResult] = useState(null);
   const [inputs, setInputs] = useState({});
 
   function getInputs(values) {
@@ -21,10 +20,9 @@ export default function Home() {
 
     const afp = final.input1 + final.input2 + final.input3;
 
-    console.log(final);
-    console.log(afp);
+ 
 
-    setInputs(final);
+    setInputs(afp);
   }
 
   return (
@@ -32,7 +30,7 @@ export default function Home() {
       <Header />
       <div className="hero_layout">
         <Form getInputs={getInputs} />
-        <Results />
+        <Results inputs={inputs} />
       </div>
       <InfoSection>
         <AnimationSection />
