@@ -14,13 +14,12 @@ function InfoSection() {
     return () => window.removeEventListener("scroll", updatePosition);
   }, []);
   useEffect(() => {
-    if (scrollY <= 850) {
+    if (scrollY <= 750) {
       setIllustration("");
     } else if (scrollY < 1500) {
       setIllustration("fullText");
     } else {
       setIllustration("eraseText");
-      // eraseTextOnce();
     }
   }, [scrollY]);
 
@@ -33,24 +32,3 @@ function InfoSection() {
 }
 
 export default InfoSection;
-
-// let string;
-// let char;
-// let maxChar;
-// const text = document.querySelector(".eraseText");
-
-// function eraseTextOnce() {
-//   string = text.textContent.toString();
-//   console.log(string);
-//   maxChar = string.length;
-//   char = maxChar;
-//   erase();
-// }
-// function erase() {
-//   if (maxChar >= char) {
-//     let erasingText;
-//     erasingText = string[maxChar - char];
-//     text.textContent -= erasingText;
-//     char--;
-//   }
-// }

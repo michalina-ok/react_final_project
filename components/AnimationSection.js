@@ -4,9 +4,11 @@ function AnimationSection(props) {
     if (props.illustration === "fullText") {
       document.querySelector(".eraseText").classList.add("hideContent");
       document.querySelector(".fullText").classList.remove("hideContent");
+      document.querySelector(".fullText").classList.add("fade-in");
     } else if (props.illustration === "eraseText") {
       document.querySelector(".fullText").classList.add("hideContent");
       document.querySelector(".eraseText").classList.remove("hideContent");
+      document.querySelector(".eraseText").classList.add("erase-text");
     } else {
       document.querySelector(".eraseText").classList.add("hideContent");
       document.querySelector(".fullText").classList.add("hideContent");

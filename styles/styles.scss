@@ -55,6 +55,8 @@ section.animation {
       left: 27%;
       font-size: 2rem;
       color: #4a4a4a;
+      overflow: hidden;
+      white-space: nowrap;
     }
   }
   /*   div.letterPlain {
@@ -121,6 +123,29 @@ section.text {
 
 .hideContent {
   display: none;
+}
+
+.fade-in {
+  animation: fadeIn 2s;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.erase-text {
+  animation: eraseT 3s steps(40, start);
+}
+@keyframes eraseT {
+  from {
+    width: 100%;
+  }
+  to {
+    width: 0%;
+  }
 }
 
 footer {
