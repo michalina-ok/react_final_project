@@ -1,8 +1,10 @@
-function Results(props) {
+function Results() {
   return (
-    <section className="results">
-      <h2>This produced 80g CO2</h2>
-    </section>
+  <>
+   <section className="results">
+        <h2>Hi hi try the calculator</h2>
+      </section>
+  </>
   )
 }
 

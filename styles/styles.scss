@@ -13,6 +13,11 @@ body {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
+.hero_layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
 header {
 
 }
