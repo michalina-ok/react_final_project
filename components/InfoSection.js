@@ -1,6 +1,6 @@
 function InfoSection() {
   return (
-    <section classname="info">InfoSection</section>
+    <section className="info">InfoSection</section>
   )
 }
 

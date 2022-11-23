@@ -4,6 +4,7 @@ function Form(props) {
   const theForm = useRef(null);
 
   function submit(e) {
+    e.preventDefault();
     props.getInputs({
       input1: theForm.current.elements.input1.value,
       input2: theForm.current.elements.input2.value,
