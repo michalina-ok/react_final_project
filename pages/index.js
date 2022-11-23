@@ -8,7 +8,7 @@ import Footer from "../components/Footer";
 import { useState } from "react";
 
 export default function Home() {
-  const [inputs, setInputs] = useState({});
+  const [inputs, setInputs] = useState(null);
 
   function getInputs(values) {
     // do stuf with values
@@ -19,8 +19,6 @@ export default function Home() {
     };
 
     const afp = final.input1 + final.input2 + final.input3;
-
- 
 
     setInputs(afp);
   }
