@@ -1,14 +1,22 @@
-function AnimationSection() {
+import React, { useEffect } from "react";
+function AnimationSection(props) {
+  useEffect(() => {
+    if (props.illustration === "fullText") {
+      document.querySelector(".eraseText").classList.add("hideContent");
+      document.querySelector(".fullText").classList.remove("hideContent");
+    } else if (props.illustration === "eraseText") {
+      document.querySelector(".fullText").classList.add("hideContent");
+      document.querySelector(".eraseText").classList.remove("hideContent");
+    } else {
+      document.querySelector(".eraseText").classList.add("hideContent");
+      document.querySelector(".fullText").classList.add("hideContent");
+    }
+  });
   return (
     <section className="animation">
-      {/* <div className="letterPlain" />
-      <div className="letterText">
-      </div>
-      <div className="letterErase">
-    </div> */}
       <div>
-        <h2 className="fullText">Thank you</h2>
-        <h2 className="eraseText">Thank |</h2>
+        <h2 className="fullText hideContent">Thank you</h2>
+        <h2 className="eraseText hideContent">Thank you</h2>
       </div>
     </section>
   );
