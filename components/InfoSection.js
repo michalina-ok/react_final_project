@@ -14,7 +14,7 @@ function InfoSection() {
     return () => window.removeEventListener("scroll", updatePosition);
   }, []);
   useEffect(() => {
-    if (scrollY <= 750) {
+    if (scrollY <= 650) {
       setIllustration("");
     } else if (scrollY < 1500) {
       setIllustration("fullText");

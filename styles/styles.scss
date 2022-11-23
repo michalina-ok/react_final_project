@@ -137,7 +137,8 @@ section.text {
   }
 }
 .erase-text {
-  animation: eraseT 3s steps(40, start);
+  width: 0;
+  animation: eraseT 3s steps(40, end);
 }
 @keyframes eraseT {
   from {
