@@ -1,7 +1,13 @@
+import InfoText from "./InfoText";
+import AnimationSection from "./AnimationSection";
+
 function InfoSection() {
   return (
-    <section classname="info">InfoSection</section>
-  )
+    <section id="infoSection" className="info">
+      <AnimationSection></AnimationSection>
+      <InfoText></InfoText>
+    </section>
+  );
 }
 
-export default InfoSection
+export default InfoSection;

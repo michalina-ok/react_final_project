@@ -1,46 +1,123 @@
-$primary-background-color: #E1BFB7;
-$secondary-background-color: #FAF8F8;
+$primary-background-color: #e1bfb7;
+$secondary-background-color: #faf8f8;
 $body-text-color: black;
-$headline-text-color: #F9F2F2;
-
-
+$headline-text-color: #f9f2f2;
 
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
 header {
-
 }
 
 form {
-
 }
 
 section.results {
-
 }
 
 section.info {
-
+  background-color: $primary-background-color;
+  display: grid;
+  grid-template-columns: 1fr;
+  column-gap: 3vw;
+  position: relative;
 }
 
 section.animation {
+  margin: 0 10%;
+  position: fixed;
+  background-color: #f69982;
+  border-radius: 100%;
+  width: 80%;
+  aspect-ratio: 1 / 1;
+  z-index: 50;
+  img {
+    max-width: 100%;
+  }
 
+  div {
+    margin: auto;
+    height: 100%;
+    width: 90%;
+    margin: 0 5%;
+    content: " ";
+    background-image: url("../public/letter-black-transparent.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: relative;
+    h2 {
+      position: absolute;
+      top: 22%;
+      left: 27%;
+      font-size: 2rem;
+      color: #4a4a4a;
+    }
+  }
+  /*   div.letterPlain {
+    z-index: 60;
+  }
+  div.letterText {
+    z-index: 70;
+  }
+  div.letterErase {
+    z-index: 80;
+  } */
 }
 
 section.text {
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  row-gap: 80vw;
+  padding: 10% 0;
+  article {
+    background-color: $secondary-background-color;
+    padding: 2vw 5vw;
+    margin: 3%;
+  }
+  h4 {
+    text-transform: uppercase;
+    text-decoration: underline;
+  }
+}
+@media screen and (min-width: 768px) {
+  // section.info {
+  // }
+  section.animation {
+    width: 40%;
+    left: 25%;
+    // div {
+    // }
+  }
+  section.text {
+    grid-column: 2;
+    row-gap: 40vw;
+    // article {
+    // }
+  }
 
+  @media screen and (min-width: 1024px) {
+    section.info {
+      grid-template-columns: 45% 1fr;
+    }
+    section.animation {
+      width: 25%;
+      top: 20%;
+      left: 0;
+      // div {
+      // }
+    }
+    section.text {
+      grid-column: 2;
+      // article {
+      // }
+    }
+  }
 }
 
 footer {
-
 }
-
-
-
-
