@@ -30,10 +30,7 @@ export default function Home() {
         <Form getInputs={getInputs} />
         <Results inputs={inputs} />
       </div>
-      <InfoSection>
-        <AnimationSection />
-        <InfoText />
-      </InfoSection>
+      <InfoSection></InfoSection>
       <Footer></Footer>
     </>
   );
