@@ -15,9 +15,9 @@ function InfoSection() {
     return () => window.removeEventListener("scroll", updatePosition);
   }, []);
   useEffect(() => {
-    if (scrollY <= 650) {
+    if (scrollY <= 750) {
       setIllustration("");
-    } else if (scrollY < 1300) {
+    } else if (scrollY < 1500) {
       setIllustration("fullText");
     } else {
       setIllustration("eraseText");
@@ -25,7 +25,7 @@ function InfoSection() {
   }, [scrollY]);
   const [aniPosition, setAniPosistion] = useState("relative");
   useEffect(() => {
-    if (scrollY < 160 || scrollY > 2767) {
+    if (scrollY < 700) {
       setAniPosistion("sticky");
     } else {
       setAniPosistion("fixed");
