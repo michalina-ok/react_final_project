@@ -5,7 +5,9 @@ function Laptop() {
   return (
     <div className="Laptop">
       <h2>Try our Calculator!</h2>
-      <div className="laptopImage"></div>
+      <div className="circleDiv">
+        <div className="laptopImage"></div>
+      </div>
     </div>
   );
 }

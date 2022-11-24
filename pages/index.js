@@ -26,8 +26,7 @@ export default function Home() {
   return (
     <>
       <Header />
-      <div className="hero_layout">
-        <h1>Carbon Calculator</h1>
+      <div id="hero" className="hero_layout">
         <Form getInputs={getInputs} />
         <Results inputs={inputs} />
       </div>

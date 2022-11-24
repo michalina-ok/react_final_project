@@ -14,7 +14,8 @@ function Form(props) {
   }
 
   return (
-    <>
+    <div className="formInfo">
+      <h1>Carbon Calculator</h1>
       <form ref={theForm} onSubmit={submit}>
         <label htmlFor="form-input1">
           How many promotional emails do you receive on average in a week? (from marketing mailing lists)
@@ -30,7 +31,7 @@ function Form(props) {
         </label>
         <button>Calculate</button>
       </form>
-    </>
+    </div>
   );
 }
 
