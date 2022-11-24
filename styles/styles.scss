@@ -34,7 +34,10 @@ section.info {
 
 section.animation {
   margin: 0 10%;
-  position: fixed;
+  width: 30vw;
+  // top: 30vh;
+  top: 30vh;
+  left: 0;
   background-color: #f69982;
   border-radius: 100%;
   width: 80%;
@@ -57,22 +60,14 @@ section.animation {
     h2 {
       position: absolute;
       top: 22%;
-      left: 27%;
+      left: 30%;
       font-size: 2rem;
       color: #4a4a4a;
       overflow: hidden;
       white-space: nowrap;
     }
   }
-  /*   div.letterPlain {
-    z-index: 60;
-  }
-  div.letterText {
-    z-index: 70;
-  }
-  div.letterErase {
-    z-index: 80;
-  } */
+  filter: opacity(0.7);
 }
 
 section.text {
@@ -92,16 +87,18 @@ section.text {
   }
 }
 @media screen and (min-width: 768px) {
-  // section.info {
-  // }
   section.animation {
-    width: 40%;
+    width: 50vw;
     left: 25%;
-    // div {
-    // }
+    top: 40vh;
+    div {
+      h2 {
+        font-size: 2rem;
+      }
+    }
   }
   section.text {
-    grid-column: 2;
+    grid-column: 1;
     row-gap: 40vw;
     // article {
     // }
@@ -112,11 +109,15 @@ section.text {
       grid-template-columns: 45% 1fr;
     }
     section.animation {
-      width: 25%;
-      top: 20%;
+      width: 30vw;
+      top: 20vh;
       left: 0;
-      // div {
-      // }
+      div {
+        h2 {
+          font-size: 2.2rem;
+        }
+      }
+      filter: opacity(1);
     }
     section.text {
       grid-column: 2;
@@ -126,8 +127,8 @@ section.text {
   }
 }
 .trees {
-  img{
-  width: 20%;
+  img {
+    width: 20%;
   }
 }
 
@@ -148,7 +149,7 @@ section.text {
 }
 .erase-text {
   width: 0;
-  animation: eraseT 3s steps(40, end);
+  animation: eraseT 2s steps(40, end);
 }
 @keyframes eraseT {
   from {

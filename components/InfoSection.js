@@ -4,6 +4,7 @@ import React, { useState, useEffect } from "react";
 
 function InfoSection() {
   const [illustration, setIllustration] = useState("");
+
   const [scrollY, setScrollY] = useState(0);
   useEffect(() => {
     const updatePosition = () => {
@@ -22,10 +23,17 @@ function InfoSection() {
       setIllustration("eraseText");
     }
   }, [scrollY]);
-
+  const [aniPosition, setAniPosistion] = useState("relative");
+  useEffect(() => {
+    if (scrollY < 270 || scrollY > 2767) {
+      setAniPosistion("sticky");
+    } else {
+      setAniPosistion("fixed");
+    }
+  }, [scrollY]);
   return (
     <section id="infoSection" className="info">
-      <AnimationSection illustration={illustration}></AnimationSection>
+      <AnimationSection illustration={illustration} position={aniPosition}></AnimationSection>
       <InfoText></InfoText>
     </section>
   );
