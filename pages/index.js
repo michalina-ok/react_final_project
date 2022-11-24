@@ -27,10 +27,11 @@ export default function Home() {
     <>
       <Header />
       <div className="hero_layout">
+        <h1>Carbon Calculator</h1>
         <Form getInputs={getInputs} />
         <Results inputs={inputs} />
       </div>
-      <InfoSection></InfoSection>
+      {/* <InfoSection></InfoSection> */}
       <Footer></Footer>
     </>
   );

@@ -11,13 +11,9 @@ body {
   background-color: $primary-background-color;
 }
 
-.hero_layout {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-}
-
 header {
   border-bottom: 1px black solid;
+  margin: 0 1vw;
 
   h1 {
     color: #f9f2f2;
@@ -47,10 +43,84 @@ header {
   }
 }
 
-form {
+.hero_layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  background-color: $secondary-background-color;
+  margin: 4vw;
+  padding: 0.5vw 5vw;
+  column-gap: 2vw;
+  row-gap: 3vw;
+  h1 {
+    text-align: center;
+    padding: 3vw 0;
+    width: 100%;
+    background-color: #120f0c;
+    color: $headline-text-color;
+    text-transform: uppercase;
+  }
 }
 
-section.results {
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 70vw;
+  input {
+    margin-top: 1vw;
+    width: 100%;
+    height: 2rem;
+    border: none;
+    background-color: rgb(210, 210, 210);
+    font-size: 1rem;
+  }
+  button {
+    border-radius: 1vw;
+    padding: 1.5vw 3.5vw;
+    font-size: 1rem;
+    align-self: flex-end;
+  }
+}
+
+.Laptop {
+  display: flex;
+  flex-direction: column;
+
+  div.laptopImage {
+    align-self: center;
+    display: flex;
+    width: 80%;
+    aspect-ratio: 1/0.7;
+    padding: 1vw;
+    background-image: url("../public/laptop-black.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+}
+.trees {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  img {
+    align-self: center;
+    width: 60%;
+  }
+}
+.results {
+  padding: 2vw 0;
+  position: relative;
+  .resPlane {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    color: black;
+  }
+  .resTree {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    color: black;
+  }
 }
 
 section.info {
@@ -130,6 +200,10 @@ section.text {
     }
   }
 
+  form {
+    height: 45vw;
+  }
+
   section.animation {
     width: 50vw;
     left: 25%;
@@ -146,6 +220,19 @@ section.text {
   }
 
   @media screen and (min-width: 1024px) {
+    .hero_layout {
+      grid-template-columns: 40% 1fr;
+      h1 {
+        grid-area: 1 / span 2;
+      }
+    }
+    form {
+      height: 30vw;
+      button {
+        padding: 0.7vw 2vw;
+      }
+    }
+
     section.info {
       grid-template-columns: 45% 1fr;
     }
@@ -165,12 +252,6 @@ section.text {
     }
   }
 }
-.trees {
-  img {
-    width: 20%;
-  }
-}
-
 .hideContent {
   display: none;
 }
