@@ -1,19 +1,36 @@
 import Trees from "./Trees";
 import Planes from "./Planes";
+import Laptop from "./Laptop";
+import { useState } from "react";
 
 function Results(props) {
-  console.log(props.inputs);
+  const [result, setresult] = useState(null);
+  let component = <Trees inputs={props.inputs} />;
 
-  return (
-    <>
-   
-      <section className="results">
-      {!props.inputs &&  <h2>Hi hi try the calculator</h2>}
-        {props.inputs && <Trees inputs={props.inputs}  />}
-        {props.inputs && <Planes inputs={props.inputs} />}
-      </section>
-    </>
-  );
+  if (result === "planes") {
+    component = <Planes inputs={props.inputs} />;
+  }
+  if (!props.inputs) {
+    return (
+      <>
+        <section className="results">
+          <Laptop />
+        </section>
+      </>
+    );
+  } else {
+    return (
+      <>
+        <a href="#" onClick={() => setresult("trees")}>
+          arrow
+        </a>
+        {component}
+        <a href="#" onClick={() => setresult("planes")}>
+          arrow
+        </a>
+      </>
+    );
+  }
 }
 
 export default Results;
