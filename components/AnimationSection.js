@@ -1,6 +1,15 @@
 import React, { useEffect } from "react";
 function AnimationSection(props) {
   useEffect(() => {
+    if (props.position === "fixed") {
+      document.querySelector(".animation").style.position = "fixed";
+      document.querySelector(".animation").style.top = "20vh";
+    } else if (props.position === "sticky") {
+      document.querySelector(".animation").style.position = "absolute";
+      document.querySelector(".animation").style.top = "10%";
+    }
+  }, [props.position]);
+  useEffect(() => {
     if (props.illustration === "fullText") {
       document.querySelector(".eraseText").classList.add("hideContent");
       document.querySelector(".fullText").classList.remove("hideContent");

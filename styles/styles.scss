@@ -35,7 +35,10 @@ section.info {
 
 section.animation {
   margin: 0 10%;
-  position: fixed;
+  width: 30vw;
+  // top: 30vh;
+  top: 30vh;
+  left: 0;
   background-color: #f69982;
   border-radius: 100%;
   width: 80%;
@@ -58,13 +61,14 @@ section.animation {
     h2 {
       position: absolute;
       top: 22%;
-      left: 27%;
+      left: 30%;
       font-size: 2rem;
       color: #4a4a4a;
       overflow: hidden;
       white-space: nowrap;
     }
   }
+  filter: opacity(0.7);
 }
 
 section.text {
@@ -85,11 +89,17 @@ section.text {
 }
 @media screen and (min-width: 768px) {
   section.animation {
-    width: 40%;
+    width: 50vw;
     left: 25%;
+    top: 40vh;
+    div {
+      h2 {
+        font-size: 2rem;
+      }
+    }
   }
   section.text {
-    grid-column: 2;
+    grid-column: 1;
     row-gap: 40vw;
   }
 
@@ -98,9 +108,15 @@ section.text {
       grid-template-columns: 45% 1fr;
     }
     section.animation {
-      width: 25%;
-      top: 20%;
+      width: 30vw;
+      top: 20vh;
       left: 0;
+      div {
+        h2 {
+          font-size: 2.2rem;
+        }
+      }
+      filter: opacity(1);
     }
     section.text {
       grid-column: 2;
@@ -130,11 +146,11 @@ section.text {
 }
 .erase-text {
   width: 0;
-  animation: eraseT 3s steps(40, end);
+  animation: eraseT 3s steps(20, end);
 }
 @keyframes eraseT {
   from {
-    width: 100%;
+    width: 13vw;
   }
   to {
     width: 0%;
