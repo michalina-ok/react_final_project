@@ -31,7 +31,7 @@ export default function Home() {
         <Form getInputs={getInputs} />
         <Results inputs={inputs} />
       </div>
-      {/* <InfoSection></InfoSection> */}
+      <InfoSection></InfoSection>
       <Footer></Footer>
     </>
   );

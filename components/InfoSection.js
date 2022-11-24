@@ -14,10 +14,11 @@ function InfoSection() {
     updatePosition();
     return () => window.removeEventListener("scroll", updatePosition);
   }, []);
+  console.log(scrollY);
   useEffect(() => {
-    if (scrollY <= 750) {
+    if (scrollY <= 1400) {
       setIllustration("");
-    } else if (scrollY < 1400) {
+    } else if (scrollY < 2000) {
       setIllustration("fullText");
     } else {
       setIllustration("eraseText");
@@ -25,9 +26,9 @@ function InfoSection() {
   }, [scrollY]);
   const [aniPosition, setAniPosistion] = useState("relative");
   useEffect(() => {
-    if (scrollY < 700) {
+    if (scrollY < 1500) {
       setAniPosistion("sticky-top");
-    } else if (scrollY > 2700) {
+    } else if (scrollY > 3500) {
       setAniPosistion("sticky-end");
     } else {
       setAniPosistion("fixed");
