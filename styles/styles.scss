@@ -149,11 +149,11 @@ section.text {
 }
 .erase-text {
   width: 0;
-  animation: eraseT 2s steps(40, end);
+  animation: eraseT 3s steps(20, end);
 }
 @keyframes eraseT {
   from {
-    width: 100%;
+    width: 13vw;
   }
   to {
     width: 0%;
