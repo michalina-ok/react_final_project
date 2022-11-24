@@ -17,7 +17,7 @@ function InfoSection() {
   useEffect(() => {
     if (scrollY <= 750) {
       setIllustration("");
-    } else if (scrollY < 1500) {
+    } else if (scrollY < 1300) {
       setIllustration("fullText");
     } else {
       setIllustration("eraseText");
