@@ -11,7 +11,7 @@ function Header() {
       <div className="right">
       <h3>Estimated C02 emmisions from emails in 2019</h3>
       <p>150 million tonnes</p>
-    <h4>But what does this mean for you?</h4>
+    <h3>But what does this mean for you?</h3>
     <p>Have a look in your email folders, and use our carbon calculator to see the effect your email habits are having on the environment.</p>
     </div>
     </section>
