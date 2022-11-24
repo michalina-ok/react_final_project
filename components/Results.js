@@ -6,6 +6,7 @@ function Results(props) {
 
   return (
     <>
+    
    
       <section className="results">
       {!props.inputs &&  <h2>Hi hi try the calculator</h2>}
