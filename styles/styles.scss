@@ -200,6 +200,8 @@ section.text {
 }
 
 footer {
+  position: relative;
+  z-index: 100;
   background-color: $primary-background-color;
   div {
     background-color: #120f0c;

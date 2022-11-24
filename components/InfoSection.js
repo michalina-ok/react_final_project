@@ -26,7 +26,9 @@ function InfoSection() {
   const [aniPosition, setAniPosistion] = useState("relative");
   useEffect(() => {
     if (scrollY < 700) {
-      setAniPosistion("sticky");
+      setAniPosistion("sticky-top");
+    } else if (scrollY > 2700) {
+      setAniPosistion("sticky-end");
     } else {
       setAniPosistion("fixed");
     }

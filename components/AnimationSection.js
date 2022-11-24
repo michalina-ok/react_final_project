@@ -4,9 +4,12 @@ function AnimationSection(props) {
     if (props.position === "fixed") {
       document.querySelector(".animation").style.position = "fixed";
       document.querySelector(".animation").style.top = "20vh";
-    } else if (props.position === "sticky") {
+    } else if (props.position === "sticky-top") {
       document.querySelector(".animation").style.position = "absolute";
       document.querySelector(".animation").style.top = "10%";
+    } else if (props.position === "sticky-end") {
+      document.querySelector(".animation").style.position = "absolute";
+      document.querySelector(".animation").style.top = "75%";
     }
   }, [props.position]);
   useEffect(() => {
